@@ -166,7 +166,7 @@
 (defun fzf-directory ()
   "Starts a fzf session at the specified directory."
   (interactive)
-  (fzf/start (ido-read-directory-name "Directory: " fzf/directory-start)))
+  (fzf/start (car (find-file-read-args "Directory: " nil))))
 
 ;;;###autoload
 (defun fzf-git ()
